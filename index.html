@@ -113,14 +113,15 @@
 
                 <div class="hero-buttons">
 
-                    <a href="#" class="primary-btn">
+                    <button class="primary-btn" id="hireBtn">
 
                         Hire Me
                         <i class="ri-arrow-right-line"></i>
 
-                    </a>
+                    </button>
 
-                    <a href="#" class="secondary-btn">
+                    <a href="#"
+                    class="secondary-btn">
 
                         View Projects
                         <i class="ri-arrow-right-line"></i>
@@ -164,8 +165,172 @@
 
     </section>
 
+    <!-- ================= HIRE ME MODAL ================= -->
+    <!-- ================= CONTACT MODAL ================= -->
+
+    <div class="contact-modal" id="contactModal">
+
+        <div class="contact-overlay" id="contactOverlay"></div>
+
+        <div class="contact-box">
+
+        <!-- CLOSE -->
+
+        <button class="close-contact" id="closeContact">
+
+            <i class="ri-close-line"></i>
+
+        </button>
+
+        <!-- SUBTITLE -->
+
+        <p class="contact-subtitle">
+            Let's Build Something Amazing 🚀
+        </p>
+
+        <!-- TITLE -->
+
+        <h2>
+            Start Your Project
+        </h2>
+
+        <!-- FORM -->
+
+        <form class="lead-form" id="leadForm">
+
+        <!-- NAME -->
+
+        <div class="input-box">
+
+            <i class="ri-user-line"></i>
+
+            <input
+                type="text"
+                placeholder="Your Name"
+                required
+            >
+
+        </div>
+
+        <!-- EMAIL -->
+
+        <div class="input-box">
+
+            <i class="ri-mail-line"></i>
+
+            <input
+                type="email"
+                placeholder="Your Email"
+                required
+            >
+
+        </div>
+
+        <!-- PROJECT TYPE -->
+
+        <div class="input-box">
+
+            <i class="ri-layout-grid-line"></i>
+
+            <select required>
+
+                <option value="">
+                    Select Project Type
+                </option>
+
+                <option>
+                    Freelance Project
+                </option>
+
+                <option>
+                    Full Stack Website
+                </option>
+
+                <option>
+                    UI Development
+                </option>
+
+                <option>
+                    Django Application
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- BUDGET -->
+
+        <div class="input-box">
+
+            <i class="ri-money-dollar-circle-line"></i>
+
+            <input
+                type="number"
+                placeholder="Project Budget (e.g. $500 - $1000)"
+                min="1" required
+            >
+
+        </div>
+
+        <!-- MESSAGE -->
+
+        <div class="input-box textarea-box">
+
+            <i class="ri-message-2-line"></i>
+
+            <textarea
+                rows="6"
+                placeholder="Tell me about your project..."
+                required
+            ></textarea>
+
+        </div>
+
+        <!-- SUBMIT -->
+
+        <button
+            type="submit"
+            class="submit-btn"
+        >
+
+            <i class="ri-send-plane-line"></i>
+
+            Submit Inquiry
+
+        </button>
+
+        <!-- WHATSAPP -->
+
+        <a
+            href="https://wa.me/917907318517"
+            target="_blank"
+            class="whatsapp-link"
+        >
+
+            <i class="ri-whatsapp-line"></i>
+
+            Chat on WhatsApp
+
+        </a>
+
+        <!-- SMALL TEXT -->
+
+        <p class="secure-text">
+
+            <i class="ri-shield-check-line"></i>
+
+            Your information is safe with me and will never be shared.
+
+        </p>
+
+    </form>
+
+    </div>
+
+    </div>
+    
     <!-- JS -->
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js?v=2"></script>
 
 </body>
 
