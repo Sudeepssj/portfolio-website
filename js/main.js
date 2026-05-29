@@ -177,3 +177,34 @@ function showToast(message){
     }, 3000);
 
 }
+
+
+const aboutToggleBtn =
+document.getElementById("aboutToggleBtn");
+
+const aboutExtra =
+document.getElementById("aboutExtra");
+
+aboutToggleBtn.addEventListener("click", () => {
+
+    aboutExtra.classList.toggle("active");
+
+    if(aboutExtra.classList.contains("active")){
+
+        aboutToggleBtn.innerHTML = `
+            Show Less
+            <i class="ri-arrow-up-s-line"></i>
+        `;
+
+    }
+
+    else{
+
+        aboutToggleBtn.innerHTML = `
+            Read More
+            <i class="ri-arrow-down-s-line"></i>
+        `;
+
+    }
+
+});
