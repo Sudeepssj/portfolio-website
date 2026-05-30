@@ -208,3 +208,29 @@ aboutToggleBtn.addEventListener("click", () => {
     }
 
 });
+
+const skillToggle =
+document.getElementById("skillToggle");
+
+const moreSkills =
+document.getElementById("moreSkills");
+
+skillToggle.addEventListener("click",()=>{
+
+    if(moreSkills.style.display==="block"){
+
+        moreSkills.style.display="none";
+
+        skillToggle.innerHTML=
+        `Explore More Technologies <i class="ri-arrow-down-s-line"></i>`;
+
+    }else{
+
+        moreSkills.style.display="block";
+
+        skillToggle.innerHTML=
+        `Hide Technologies <i class="ri-arrow-up-s-line"></i>`;
+
+    }
+
+});

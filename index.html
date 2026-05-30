@@ -11,6 +11,11 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -168,126 +173,129 @@
 
     <section class="about section" id="about">
 
-        <div class="about-container">
+        <div class="container">
+            <div class="about-container">
 
-            <!-- ABOUT IMAGE -->
+                <!-- ABOUT IMAGE -->
 
-            <div class="about-image">
+                <div class="about-image">
 
-                <img
-                    src="./assets/images/about.png"
-                    alt="About Image"
-                >
+                    <img
+                        src="./assets/images/about.png"
+                        alt="About Image"
+                    >
 
-            </div>
+                </div>
 
-            <!-- ABOUT CONTENT -->
+                <!-- ABOUT CONTENT -->
 
-            <div class="about-content">
+                <div class="about-content">
 
-                <!-- SUBTITLE -->
+                    <!-- SUBTITLE -->
 
-                <p class="about-subtitle">
-                    About Me
-                </p>
+                    <p class="about-subtitle">
+                        About Me
+                    </p>
 
-                <!-- TITLE -->
+                    <!-- TITLE -->
 
-                <h2 class="about-title">
+                    <h2 class="about-title">
 
-                    Helping businesses build
-                    <span>modern digital experiences.</span>
+                        Helping businesses build
+                        <span>modern digital experiences.</span>
 
-                </h2>
+                    </h2>
 
-                <!-- SHORT DESCRIPTION -->
+                    <!-- SHORT DESCRIPTION -->
 
-                <p class="about-description">
+                    <p class="about-description">
 
-                    I’m a passionate Full Stack Developer focused on building
-                    modern, responsive, and scalable web applications that
-                    deliver real-world solutions.
-
-                </p>
-
-                <!-- EXPAND CONTENT -->
-
-                <div
-                    class="about-extra"
-                    id="aboutExtra"
-                >
-
-                    <p class="about-description extra-text">
-
-                        I specialize in creating clean user interfaces,
-                        interactive frontend experiences, and powerful backend
-                        systems using JavaScript, Django, MySQL, and modern web technologies.
-
-                        My goal is to transform ideas into impactful digital products
-                        that combine performance, functionality, creativity,
-                        and exceptional user experience.
-
-                        I enjoy solving problems through code and continuously
-                        learning new technologies to build better, faster,
-                        and more innovative web applications.
+                        I’m a passionate Full Stack Developer focused on building
+                        modern, responsive, and scalable web applications that
+                        deliver real-world solutions.
 
                     </p>
 
-                    <!-- INFO CARDS -->
+                    <!-- EXPAND CONTENT -->
 
-                    <div class="about-cards">
+                    <div
+                        class="about-extra"
+                        id="aboutExtra"
+                    >
 
-                        <div class="about-card">
+                        <p class="about-description extra-text">
 
-                            <i class="ri-graduation-cap-fill"></i>
+                            I specialize in creating clean user interfaces,
+                            interactive frontend experiences, and powerful backend
+                            systems using JavaScript, Django, MySQL, and modern web technologies.
 
-                            <div>
+                            My goal is to transform ideas into impactful digital products
+                            that combine performance, functionality, creativity,
+                            and exceptional user experience.
 
-                                <h4>Education</h4>
+                            I enjoy solving problems through code and continuously
+                            learning new technologies to build better, faster,
+                            and more innovative web applications.
 
-                                <p>MCA Graduate</p>
+                        </p>
 
-                            </div>
+                        <!-- INFO CARDS -->
 
-                        </div>
+                        <div class="about-cards">
 
-                        <div class="about-card">
+                            <div class="about-card">
 
-                            <i class="ri-code-s-slash-line"></i>
+                                <i class="ri-graduation-cap-fill"></i>
 
-                            <div>
+                                <div>
 
-                                <h4>Specialization</h4>
+                                    <h4>Education</h4>
 
-                                <p>Full Stack Development</p>
+                                    <p>MCA Graduate</p>
 
-                            </div>
-
-                        </div>
-
-                        <div class="about-card">
-
-                            <i class="ri-briefcase-4-fill"></i>
-
-                            <div>
-
-                                <h4>Projects</h4>
-
-                                <p>10+ Real Projects</p>
+                                </div>
 
                             </div>
 
-                        </div>
+                            <div class="about-card">
 
-                        <div class="about-card">
+                                <i class="ri-code-s-slash-line"></i>
 
-                            <i class="ri-rocket-2-fill"></i>
+                                <div>
 
-                            <div>
+                                    <h4>Specialization</h4>
 
-                                <h4>Focus</h4>
+                                    <p>Full Stack Development</p>
 
-                                <p>Modern UI/UX</p>
+                                </div>
+
+                            </div>
+
+                            <div class="about-card">
+
+                                <i class="ri-briefcase-4-fill"></i>
+
+                                <div>
+
+                                    <h4>Projects</h4>
+
+                                    <p>10+ Real Projects</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="about-card">
+
+                                <i class="ri-rocket-2-fill"></i>
+
+                                <div>
+
+                                    <h4>Focus</h4>
+
+                                    <p>Modern UI/UX</p>
+
+                                </div>
 
                             </div>
 
@@ -295,22 +303,22 @@
 
                     </div>
 
+                    <!-- BUTTON -->
+
+                    <button
+                        class="about-btn"
+                        id="aboutToggleBtn"
+                    >
+
+                        Read More
+
+                        <i class="ri-arrow-down-s-line"></i>
+
+                    </button>
+
                 </div>
-
-                <!-- BUTTON -->
-
-                <button
-                    class="about-btn"
-                    id="aboutToggleBtn"
-                >
-
-                    Read More
-
-                    <i class="ri-arrow-down-s-line"></i>
-
-                </button>
-
             </div>
+
 
         </div>
 
@@ -320,131 +328,324 @@
     <section class="services section" id="services">
 
         <!-- SECTION TITLE -->
+        <div class="container">
+            <div class="section-header">
 
-        <div class="section-header">
+                <p class="section-subtitle">
+                    <i class="ri-box-3-line"></i>
+                    What I Build
+                </p>
 
-            <p class="section-subtitle">
-                <i class="ri-box-3-line"></i>
-                What I Build
-            </p>
+            </div>
 
-        </div>
+            <!-- SERVICES GRID -->
 
-        <!-- SERVICES GRID -->
+            <div class="services-container">
 
-        <div class="services-container">
+                <!-- CARD 1 -->
 
-            <!-- CARD 1 -->
+                <div class="service-card">
 
-            <div class="service-card">
+                    <div class="service-icon">
 
-                <div class="service-icon">
+                        <i class="ri-code-box-line"></i>
 
-                    <i class="ri-code-box-line"></i>
+                    </div>
+
+                    <h3>
+
+                        Full Stack Web
+                        Development
+
+                    </h3>
+
+                    <p>
+
+                        Building modern, scalable, and responsive
+                        full-stack web applications using Django,
+                        JavaScript, and MySQL.
+
+                    </p>
 
                 </div>
 
-                <h3>
+                <!-- CARD 2 -->
 
-                    Full Stack Web
-                    Development
+                <div class="service-card">
 
-                </h3>
+                    <div class="service-icon django">
 
-                <p>
+                        <i class="ri-database-2-line"></i>
 
-                    Building modern, scalable, and responsive
-                    full-stack web applications using Django,
-                    JavaScript, and MySQL.
+                    </div>
+
+                    <h3>
+
+                        Django Web
+                        Applications
+
+                    </h3>
+
+                    <p>
+
+                        Developing secure and dynamic web applications
+                        with authentication, CRUD operations,
+                        REST APIs, and admin systems.
+
+                    </p>
+
+                </div>
+
+                <!-- CARD 3 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon ui">
+
+                        <i class="ri-layout-4-line"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Modern UI
+                        Development
+
+                    </h3>
+
+                    <p>
+
+                        Creating clean, modern, and mobile-friendly
+                        user interfaces with smooth user experiences
+                        and interactive design.
+
+                    </p>
+
+                </div>
+
+                <!-- CARD 4 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon dashboard">
+
+                        <i class="ri-bar-chart-box-line"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Dashboard &
+                        Management Systems
+
+                    </h3>
+
+                    <p>
+
+                        Building smart dashboards, management platforms,
+                        analytics systems, and business web solutions.
+
+                    </p>
+
+                </div>
+
+            </div>
+        </div>    
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+
+    <section class="skills section" id="skills">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <p class="section-subtitle">
+                    SKILLS
+                </p>
+
+                <h2 class="section-title">
+
+                    My Technical
+                    <span>Skills</span>
+
+                </h2>
+
+                <p class="section-description">
+
+                    Technologies I use to build modern and scalable web applications.
 
                 </p>
 
             </div>
 
-            <!-- CARD 2 -->
+            <!-- MAIN SKILLS -->
 
-            <div class="service-card">
+            <div class="skills-grid">
 
-                <div class="service-icon django">
+                <div class="skill-card">
 
-                    <i class="ri-database-2-line"></i>
+                    <i class="fa-brands fa-html5 html-icon"></i>
+
+                    <h3>HTML5</h3>
+
+                    <div class="skill-progress">
+                        <div class="skill-bar html-bar"></div>
+                    </div>
+
+                    <span>95%</span>
 
                 </div>
 
-                <h3>
+                <div class="skill-card">
 
-                    Django Web
-                    Applications
+                    <i class="fa-brands fa-css3-alt css-icon"></i>
 
-                </h3>
+                    <h3>CSS3</h3>
 
-                <p>
+                    <div class="skill-progress">
+                        <div class="skill-bar css-bar"></div>
+                    </div>
 
-                    Developing secure and dynamic web applications
-                    with authentication, CRUD operations,
-                    REST APIs, and admin systems.
+                    <span>90%</span>
 
-                </p>
+                </div>
+
+                <div class="skill-card">
+
+                    <i class="fa-brands fa-js js-icon"></i>
+
+                    <h3>JavaScript</h3>
+
+                    <div class="skill-progress">
+                        <div class="skill-bar js-bar"></div>
+                    </div>
+
+                    <span>85%</span>
+
+                </div>
+
+                <div class="skill-card">
+
+                    <i class="fa-solid fa-wind tailwind-icon"></i>
+
+                    <h3>Tailwind CSS</h3>
+
+                    <div class="skill-progress">
+                        <div class="skill-bar tailwind-bar"></div>
+                    </div>
+
+                    <span>90%</span>
+
+                </div>
+
+                <div class="skill-card">
+
+                    <i class="fa-brands fa-python python-icon"></i>
+
+                    <h3>Python</h3>
+
+                    <div class="skill-progress">
+                        <div class="skill-bar python-bar"></div>
+                    </div>
+
+                    <span>85%</span>
+
+                </div>
+
+                <div class="skill-card">
+
+                    <i class="fa-solid fa-leaf django-icon"></i>
+
+                    <h3>Django</h3>
+
+                    <div class="skill-progress">
+                        <div class="skill-bar django-bar"></div>
+                    </div>
+
+                    <span>90%</span>
+
+                </div>
 
             </div>
 
-            <!-- CARD 3 -->
+            <!-- BUTTON -->
 
-            <div class="service-card">
+            <div class="skills-btn-wrap">
 
-                <div class="service-icon ui">
+                <button id="skillToggle" class="skills-btn">
 
-                    <i class="ri-layout-4-line"></i>
+                    <span>Explore More Technologies</span>
 
-                </div>
+                    <i class="ri-arrow-right-line"></i>
 
-                <h3>
-
-                    Modern UI
-                    Development
-
-                </h3>
-
-                <p>
-
-                    Creating clean, modern, and mobile-friendly
-                    user interfaces with smooth user experiences
-                    and interactive design.
-
-                </p>
+                </button>
 
             </div>
 
-            <!-- CARD 4 -->
+            <!-- EXTRA SKILLS -->
 
-            <div class="service-card">
+            <div id="moreSkills" class="more-skills">
 
-                <div class="service-icon dashboard">
+                <div class="extra-skills-grid">
 
-                    <i class="ri-bar-chart-box-line"></i>
+                    <div class="extra-skill">
+                        <i class="fa-brands fa-bootstrap"></i>
+                        Bootstrap
+                    </div>
 
+                    <div class="extra-skill">
+                        <i class="fa-solid fa-code"></i>
+                        REST API
+                    </div>
+
+                    <div class="extra-skill">
+                        <i class="fa-solid fa-bolt"></i>
+                        AJAX
+                    </div>
+
+                    <div class="extra-skill">
+                        <i class="fa-solid fa-database"></i>
+                        SQLite
+                    </div>
+
+                    <div class="extra-skill">
+                        <i class="fa-solid fa-server"></i>
+                        MySQL
+                    </div>
+
+                    <div class="extra-skill">
+                        <i class="fa-brands fa-git-alt"></i>
+                        Git
+                    </div>
+
+                    <div class="extra-skill">
+                        <i class="fa-brands fa-github"></i>
+                        GitHub
+                    </div>
+
+                    <div class="extra-skill">
+                        <i class="fa-solid fa-code"></i>
+                        VS Code
+                    </div>
+
+                    <div class="extra-skill">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        Responsive UI
+                    </div>
+
+                    <div class="extra-skill">
+                        <i class="fa-solid fa-layer-group"></i>
+                        jQuery
+                    </div>
                 </div>
-
-                <h3>
-
-                    Dashboard &
-                    Management Systems
-
-                </h3>
-
-                <p>
-
-                    Building smart dashboards, management platforms,
-                    analytics systems, and business web solutions.
-
-                </p>
 
             </div>
 
         </div>
 
     </section>
-
 
 
     <!-- ================= HIRE ME MODAL ================= -->
