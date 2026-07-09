@@ -55,6 +55,22 @@ document.getElementById("leadForm");
 const scriptURL =
 "https://script.google.com/macros/s/AKfycbyMZlK0q5i5UTFeuVgmrbSX5cu_YOu3LH1grQkmTvk-9MxSLq-wfKX33ET5N2A_ERRQ/exec";
 
+// ================= GOOGLE SHEET FUNCTION =================
+
+async function submitToGoogleSheet(data){
+
+    const response = await fetch(scriptURL,{
+
+        method:"POST",
+
+        body:JSON.stringify(data)
+
+    });
+
+    return await response.json();
+
+}
+
 leadForm.addEventListener("submit", async (e) => {
 
     e.preventDefault();
@@ -74,7 +90,9 @@ leadForm.addEventListener("submit", async (e) => {
         leadForm.querySelectorAll("input")[2].value,
 
         message:
-        leadForm.querySelector("textarea").value
+        leadForm.querySelector("textarea").value,
+
+        source:"Hire Me Modal"
 
     };
 
@@ -86,17 +104,8 @@ leadForm.addEventListener("submit", async (e) => {
 
     try{
 
-        const response =
-        await fetch(scriptURL, {
-
-            method:"POST",
-
-            body:JSON.stringify(formData)
-
-        });
-
         const result =
-        await response.json();
+        await submitToGoogleSheet(formData);
 
         if(result.success){
 
@@ -232,5 +241,71 @@ skillToggle.addEventListener("click",()=>{
         `Hide Technologies <i class="ri-arrow-up-s-line"></i>`;
 
     }
+
+});
+
+
+
+// ================= CONTACT FORM =================
+
+const contactForm =
+document.getElementById("contactForm");
+
+contactForm.addEventListener("submit",async(e)=>{
+
+    e.preventDefault();
+
+    const formData={
+
+        name:
+        contactForm.querySelectorAll("input")[0].value,
+
+        email:
+        contactForm.querySelectorAll("input")[1].value,
+
+        project:
+        contactForm.querySelectorAll("input")[2].value,
+
+        budget:"",
+
+        message:
+        contactForm.querySelector("textarea").value,
+
+        source:"Contact Section"
+
+    };
+
+    const btn=
+    contactForm.querySelector("button");
+
+    btn.innerHTML="Sending...";
+
+    try{
+
+        const result=
+        await submitToGoogleSheet(formData);
+
+        if(result.success){
+
+            showToast("✅ Message Sent Successfully!");
+
+            contactForm.reset();
+
+        }
+
+    }
+
+    catch(error){
+
+        console.log(error);
+
+        showToast("❌ Submission Failed!");
+
+    }
+
+    btn.innerHTML=`
+        Send Message
+        <i class="ri-send-plane-line"></i>
+    `;
 
 });
