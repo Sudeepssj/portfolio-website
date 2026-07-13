@@ -651,6 +651,50 @@ body{
 
 @media(max-width:768px){
 
+    .projects{
+
+        margin-top:80px;
+
+    }
+
+    .contact{
+
+        padding:80px 0;
+
+    }
+
+    .section-title{
+
+        font-size:2.6rem;
+
+    }
+
+    .section-description{
+
+        font-size:.95rem;
+
+    }
+    .featured-project{
+
+        display:block;
+        grid-template-columns:none;
+
+        flex-direction:column;
+
+        gap:18px;
+
+        padding:18px;
+
+    }
+
+    .featured-content{
+
+        text-align:left;
+
+        width:100%;
+
+    }
+
     .contact-box{
 
         padding:30px 20px;
@@ -1834,7 +1878,7 @@ body{
 .project-tags{
     display:flex;
     flex-wrap:wrap;
-    gap:10px;
+    gap:8px;
     margin-top:20px;
 }
 
@@ -1849,6 +1893,7 @@ body{
     display:flex;
     gap:15px;
     margin-top:25px;
+    flex-wrap:wrap;
 }
 
 .project-stats{
@@ -1903,6 +1948,7 @@ body{
     width:100%;
     height:220px;
     object-fit:cover;
+    display:block;
 }
 
 .project-body{
@@ -2019,7 +2065,7 @@ body{
 
 .contact-card h4{
 
-    font-size:1.05rem;
+    font-size:1rem;
 
     margin-bottom:6px;
 
@@ -2030,6 +2076,8 @@ body{
 .contact-card p{
 
     color:var(--text-light);
+
+    font-size:.95rem;
 
     text-decoration:none;
 
@@ -2123,7 +2171,7 @@ body{
 
     border-radius:22px;
 
-    padding:35px;
+    padding:20px;
 }
 
 .form-row{
@@ -2262,11 +2310,206 @@ body{
 
 @media(max-width:768px){
 
+    .featured-content h3{
+
+        font-size:1.9rem;
+        margin:16px 0;
+
+    }
+
+    .featured-content p{
+
+        font-size:.95rem;
+
+    }
+
+    .project-buttons{
+
+        flex-direction:column;
+        gap:12px;
+        display:flex;
+
+    }
+
+    .project-buttons a{
+
+        width:100%;
+        text-align:center;
+
+    }
+
+    .contact-process{
+
+        margin-top:25px;
+
+        padding:18px;
+
+    }
+
+    .contact-process h3{
+
+        font-size:1.35rem;
+
+    }
+
+    .process-content h4{
+
+        font-size:.95rem;
+
+    }
+
+    .process-content p{
+
+        font-size:.85rem;
+
+    }
+    .contact-form-box{
+
+        padding:18px;
+
+    }
+
+    .contact-form-box textarea{
+
+        height:170px;
+
+    }
+
+    .contact-card{
+
+        padding:15px;
+
+    }
+
+    .contact-card h4{
+
+        font-size:.95rem;
+
+    }
+
+    .contact-card a{
+
+        font-size:.88rem;
+
+    }
+
+    .contact-card p{
+
+        font-size:.88rem;
+
+    }
+    
     .form-row{
 
         grid-template-columns:1fr;
 
         gap:16px;
+    }
+
+    .projects-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .project-card{
+
+        width:100%;
+
+    }
+
+    .project-card img{
+
+        height:240px;
+
+    }
+
+    .project-stats{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:15px;
+
+    }
+
+    .featured-project{
+
+        display:flex;
+        flex-direction:column;
+
+        gap:20px;
+
+        padding:20px;
+
+    }
+
+    .featured-image{
+
+        order:1;
+
+        width:100%;
+
+    }
+
+    .featured-image img{
+
+        width:100%;
+        height:220px;
+
+        object-fit:cover;
+
+        border-radius:14px;
+
+        display:block;
+
+    }
+
+    .featured-content{
+
+        order:2;
+
+        width:100%;
+
+    }
+
+    .featured-content h3{
+
+        font-size:2rem;
+
+        margin:15px 0;
+
+    }
+
+    .featured-content p{
+
+        font-size:.95rem;
+
+        line-height:1.8;
+
+    }
+
+    .project-tags{
+
+        margin-top:18px;
+
+    }
+
+    .project-buttons{
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:12px;
+
+    }
+
+    .project-buttons a{
+
+        width:100%;
+
+        justify-content:center;
+
     }
 
     .contact-card{
@@ -2320,7 +2563,7 @@ body{
 
     margin-top:35px;
 
-    padding:30px;
+    padding: 18px;
 
     background:rgba(8,15,40,.65);
 
