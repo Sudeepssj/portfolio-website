@@ -955,28 +955,7 @@ body{
 
 }
 
-/* IMAGE */
 
-/* .about-image{
-
-    width:100%;
-
-    display:flex;
-    align-items:center;
-
-} */
-
-/* .about-image img{
-
-    width:100%;
-
-    height:auto;
-
-    object-fit:cover;
-
-    display:block;
-
-} */
 
 .about-image {
     position: relative;
@@ -1009,7 +988,7 @@ body{
 
     color:#00e5ff;
 
-    font-size:18px;
+    font-size:22px;
 
     font-weight:600;
 
@@ -1233,6 +1212,9 @@ body{
         grid-template-columns:1fr;
 
     }
+    .about-subtitle {
+        font-size: 25px;
+    }
 
 }
 
@@ -1240,7 +1222,7 @@ body{
 
     .about-title{
 
-        font-size:30px;
+        font-size:25px;
 
     }
 
@@ -1274,7 +1256,7 @@ body{
 
     color:#ffffff;
 
-    font-size:42px;
+    font-size:2rem;
 
     font-weight:700;
 
@@ -1810,7 +1792,7 @@ body{
 }
 
 .section-title{
-    font-size:3.5rem;
+    font-size:2.5rem;
     font-weight:800;
     line-height:1.1;
     margin-bottom:15px;
