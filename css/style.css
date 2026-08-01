@@ -2907,3 +2907,73 @@ body{
     }
 
 }
+
+/*=========================
+      COMING SOON CARD
+=========================*/
+
+.coming-soon-card{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    min-height:430px;
+
+    text-align:center;
+
+    border:2px dashed rgba(0,229,255,.25);
+
+    background:rgba(0,229,255,.03);
+
+}
+
+.coming-soon-content{
+
+    padding:30px;
+
+}
+
+.coming-soon-content i{
+
+    font-size:70px;
+
+    color:var(--first-color);
+
+    margin-bottom:20px;
+
+}
+
+.coming-soon-content h3{
+
+    color:#fff;
+
+    margin-bottom:15px;
+
+}
+
+.coming-soon-content p{
+
+    color:var(--text-color);
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.coming-badge{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(0,229,255,.25);
+
+    color:var(--first-color);
+
+    font-weight:600;
+
+}
