@@ -2977,3 +2977,431 @@ body{
     font-weight:600;
 
 }
+
+/* =====================================================
+   PROJECT DETAILS MODAL
+===================================================== */
+
+.project-modal{
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:30px;
+
+    z-index:10000;
+
+    visibility:hidden;
+    opacity:0;
+
+    transition:.3s ease;
+}
+
+.project-modal.active{
+    visibility:visible;
+    opacity:1;
+}
+
+
+/* ================= OVERLAY ================= */
+
+.project-modal-overlay{
+    position:absolute;
+    inset:0;
+
+    background:rgba(0,0,0,.78);
+
+    backdrop-filter:blur(10px);
+}
+
+
+/* ================= MODAL BOX ================= */
+
+.project-modal-box{
+
+    position:relative;
+
+    width:100%;
+    max-width:1050px;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    background:#07111f;
+
+    border:1px solid rgba(0,229,255,.15);
+
+    border-radius:24px;
+
+    box-shadow:
+        0 0 60px rgba(0,229,255,.08);
+
+    z-index:2;
+
+    transform:translateY(30px) scale(.97);
+
+    transition:.35s ease;
+}
+
+.project-modal.active .project-modal-box{
+
+    transform:translateY(0) scale(1);
+
+}
+
+
+/* ================= CLOSE ================= */
+
+.project-modal-close{
+
+    position:absolute;
+
+    top:18px;
+    right:18px;
+
+    width:44px;
+    height:44px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(2,6,23,.85);
+
+    color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    z-index:5;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+}
+
+.project-modal-close:hover{
+
+    background:#00e5ff;
+
+    color:#000;
+
+    transform:rotate(90deg);
+}
+
+
+/* ================= IMAGE ================= */
+
+.project-modal-image{
+
+    width:100%;
+
+    max-height:430px;
+
+    overflow:hidden;
+
+    background:#020617;
+}
+
+.project-modal-image img{
+
+    width:100%;
+
+    height:auto;
+
+    max-height:430px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+
+/* ================= CONTENT ================= */
+
+.project-modal-content{
+
+    padding:35px 40px 40px;
+}
+
+.project-modal-label{
+
+    color:#00e5ff;
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+}
+
+.project-modal-content h2{
+
+    font-size:2.4rem;
+
+    margin:12px 0 18px;
+
+    color:#fff;
+}
+
+.project-modal-overview{
+
+    color:#b8c0d4;
+
+    line-height:1.8;
+
+    font-size:1rem;
+
+    margin-bottom:30px;
+}
+
+
+/* ================= SECTIONS ================= */
+
+.modal-section{
+
+    margin-top:28px;
+
+    padding-top:24px;
+
+    border-top:1px solid rgba(255,255,255,.06);
+}
+
+.modal-section h3{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#fff;
+
+    font-size:1.1rem;
+
+    margin-bottom:15px;
+}
+
+.modal-section h3 i{
+
+    color:#00e5ff;
+
+    font-size:1.3rem;
+}
+
+.modal-section p{
+
+    color:#aeb8ca;
+
+    line-height:1.8;
+
+    margin:0;
+}
+
+
+/* ================= FEATURES ================= */
+
+#modalProjectFeatures{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:10px 25px;
+
+    padding:0;
+
+    margin:0;
+
+    list-style:none;
+}
+
+#modalProjectFeatures li{
+
+    position:relative;
+
+    padding-left:22px;
+
+    color:#b8c0d4;
+
+    line-height:1.6;
+}
+
+#modalProjectFeatures li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    color:#00e5ff;
+
+    font-weight:bold;
+}
+
+
+/* ================= TECH ================= */
+
+.modal-tech{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+}
+
+.modal-tech span{
+
+    padding:9px 15px;
+
+    border-radius:50px;
+
+    border:1px solid rgba(0,229,255,.15);
+
+    background:rgba(0,229,255,.04);
+
+    color:#dce6f5;
+
+    font-size:.88rem;
+}
+
+
+/* ================= ACTION BUTTONS ================= */
+
+.modal-project-actions{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+    margin-top:35px;
+
+    padding-top:25px;
+
+    border-top:1px solid rgba(255,255,255,.06);
+}
+
+.modal-project-actions .primary-btn,
+.modal-project-actions .secondary-btn{
+
+    min-width:150px;
+}
+
+.deployment-status{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px 22px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,193,7,.25);
+
+    color:#ffc107;
+
+    background:rgba(255,193,7,.05);
+
+    font-weight:600;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .project-modal{
+
+        padding:15px;
+    }
+
+    .project-modal-box{
+
+        max-height:94vh;
+
+        border-radius:20px;
+    }
+
+    .project-modal-content{
+
+        padding:28px 22px 30px;
+    }
+
+    .project-modal-content h2{
+
+        font-size:1.8rem;
+    }
+
+    .project-modal-image{
+
+        max-height:250px;
+    }
+
+    .project-modal-image img{
+
+        max-height:250px;
+
+        object-fit:cover;
+    }
+
+    #modalProjectFeatures{
+
+        grid-template-columns:1fr;
+    }
+
+    .modal-project-actions{
+
+        flex-direction:column;
+    }
+
+    .modal-project-actions .primary-btn,
+    .modal-project-actions .secondary-btn,
+    .deployment-status{
+
+        width:100%;
+    }
+
+}
+
+.project-actions button{
+    flex:1;
+    text-align:center;
+    padding:10px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:10px;
+
+    background:transparent;
+
+    color:white;
+
+    font-family:inherit;
+
+    font-size:inherit;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.project-actions button:hover{
+    border-color:#00eaff;
+    color:#00eaff;
+}
+
+.project-buttons button{
+    font-family:inherit;
+}

@@ -309,3 +309,554 @@ contactForm.addEventListener("submit",async(e)=>{
     `;
 
 });
+
+// =====================================================
+// PROJECT DETAILS MODAL
+// =====================================================
+
+const projectModal =
+    document.getElementById("projectModal");
+
+const projectModalClose =
+    document.getElementById("projectModalClose");
+
+const projectModalOverlay =
+    document.getElementById("projectModalOverlay");
+
+const modalProjectImage =
+    document.getElementById("modalProjectImage");
+
+const modalProjectTitle =
+    document.getElementById("modalProjectTitle");
+
+const modalProjectOverview =
+    document.getElementById("modalProjectOverview");
+
+const modalProjectFeatures =
+    document.getElementById("modalProjectFeatures");
+
+const modalProjectTech =
+    document.getElementById("modalProjectTech");
+
+const modalProjectChallenges =
+    document.getElementById("modalProjectChallenges");
+
+const modalProjectLearning =
+    document.getElementById("modalProjectLearning");
+
+const modalGithub =
+    document.getElementById("modalGithub");
+
+const modalLiveDemo =
+    document.getElementById("modalLiveDemo");
+
+const modalDeployment =
+    document.getElementById("modalDeployment");
+
+
+// =====================================================
+// PROJECT DATA
+// =====================================================
+
+const projectData = {
+
+    // ================= SMART TOURISM =================
+
+    "smart-tourism": {
+
+        title: "Smart Tourism Platform",
+
+        image: "./assets/images/tourism-project.png",
+
+        overview:
+            "A complete tourism management system that helps users discover destinations, explore packages, make bookings and manage tours through a modern dashboard.",
+
+        features: [
+
+            "User authentication and profile management",
+
+            "Tourism destination and package discovery",
+
+            "Tour booking management",
+
+            "Booking status tracking",
+
+            "User dashboard",
+
+            "Modern responsive interface"
+
+        ],
+
+        tech: [
+            "Django",
+            "MySQL",
+            "JavaScript",
+            "Tailwind CSS"
+        ],
+
+        challenges:
+            "Building a complete tourism workflow that connects users, tourism services, bookings and dashboard management into one system.",
+
+        learning:
+            "Improved my understanding of Django application architecture, database relationships, authentication, booking workflows and responsive UI development.",
+
+        github:
+            "https://github.com/Sudeepssj/smart-tourism-system",
+
+        liveDemo: ""
+
+    },
+
+
+    // ================= PET ADOPTION =================
+
+    "pet-adoption": {
+
+        title: "Pet Adoption Platform",
+
+        image: "./assets/images/pet-adoption.jpg",
+
+        overview:
+            "A web platform designed to manage pet listings, adoption requests and interactions between users and available pets.",
+
+        features: [
+
+            "Pet listing management",
+
+            "Pet adoption requests",
+
+            "User authentication",
+
+            "Pet information management",
+
+            "User interactions",
+
+            "Responsive web interface"
+
+        ],
+
+        tech: [
+            "Django",
+            "MySQL",
+            "JavaScript"
+        ],
+
+        challenges:
+            "Designing the adoption workflow and organizing the relationship between users, pets and adoption requests.",
+
+        learning:
+            "Strengthened my understanding of Django models, CRUD operations, authentication and database relationships.",
+
+        github:
+            "https://github.com/Sudeepssj/Pet-adoption-management-system",
+
+        liveDemo: ""
+
+    },
+
+
+    // ================= EXPENSE TRACKER =================
+
+    "expense-tracker": {
+
+        title: "Expense Tracker",
+
+        image: "./assets/images/expense-tracker.png",
+
+        overview:
+            "A Django-based expense management application that helps users track spending, manage categories and visualize financial data.",
+
+        features: [
+
+            "Add and manage expenses",
+
+            "Expense CRUD operations",
+
+            "Category-wise tracking",
+
+            "Monthly expense summary",
+
+            "Interactive charts",
+
+            "AJAX-based dynamic interactions"
+
+        ],
+
+        tech: [
+            "Django",
+            "SQLite",
+            "Chart.js",
+            "AJAX",
+            "Bootstrap"
+        ],
+
+        challenges:
+            "Organizing expense data and presenting financial information clearly through dynamic summaries and visual charts.",
+
+        learning:
+            "Learned more about Django CRUD systems, database relationships, AJAX interactions and data visualization using Chart.js.",
+
+        github:
+            "https://github.com/Sudeepssj/Expense-tracker-web-app",
+
+        liveDemo: ""
+
+    },
+
+
+    // ================= DIGITAL SMART CARD =================
+
+    "smart-card": {
+
+        title: "Digital Smart Card",
+
+        image: "./assets/images/smart-card.png",
+
+        overview:
+            "A professional digital business card that allows users to share their profile, contact information and social links through a modern shareable interface.",
+
+        features: [
+
+            "Digital professional profile",
+
+            "Contact information",
+
+            "Social media links",
+
+            "QR code sharing",
+
+            "Save contact functionality",
+
+            "Shareable profile"
+
+        ],
+
+        tech: [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+
+        challenges:
+            "Creating a professional digital identity that works smoothly across desktop and mobile devices while keeping the interface simple and shareable.",
+
+        learning:
+            "Improved my frontend development skills, responsive design, QR integration and interactive UI development.",
+
+        github:
+            "https://github.com/Sudeepssj/Digital-smart-card-system",
+
+        // IMPORTANT:
+        // Put your real Digital Smart Card deployment URL here.
+        liveDemo: "https://smartcard7907.netlify.app/?v=2ho"
+
+    },
+
+
+    // ================= EDULEARN LMS =================
+
+    "edulearn": {
+
+        title: "EduLearn LMS",
+
+        image: "./assets/images/edulearn-lms.png",
+
+        overview:
+            "A full-stack Learning Management System built with Django that allows instructors to create and manage courses, students to enroll and learn, and administrators to monitor the platform.",
+
+        features: [
+
+            "Role-based authentication",
+
+            "Admin dashboard",
+
+            "Instructor dashboard",
+
+            "Create, edit and delete courses",
+
+            "Student course enrollment",
+
+            "Student learning dashboard",
+
+            "Profile management",
+
+            "Login and logout system",
+
+            "Responsive modern UI"
+
+        ],
+
+        tech: [
+            "Django",
+            "HTML",
+            "CSS",
+            "Bootstrap",
+            "Tailwind CSS",
+            "SQLite",
+            "Django Authentication"
+        ],
+
+        challenges:
+            "Implementing role-based access for Admin, Instructor and Student users while keeping the course management and enrollment workflows organized.",
+
+        learning:
+            "Strengthened my understanding of Django authentication, role-based systems, CRUD operations, database relationships, dashboard design and deployment.",
+
+        github:
+            "https://github.com/Sudeepssj/Edulearn-lms",
+
+        liveDemo:
+            "https://lms-project-7s45.onrender.com"
+
+    },
+
+
+    // ================= NEXUSCHAT =================
+
+    "nexuschat": {
+
+        title: "NexusChat",
+
+        image: "./assets/images/nexuschat.png",
+
+        overview:
+            "A full-stack real-time chat application built with Django Channels and WebSockets, supporting direct messaging, group rooms, presence updates and live notifications.",
+
+        features: [
+
+            "Real-time messaging using WebSockets",
+
+            "One-to-one chat",
+
+            "Group chat rooms",
+
+            "Live typing indicators",
+
+            "Online and offline presence",
+
+            "Real-time notifications",
+
+            "Live user and room search",
+
+            "User authentication",
+
+            "Admin dashboard",
+
+            "Responsive dark UI"
+
+        ],
+
+        tech: [
+            "Django",
+            "Django Channels",
+            "WebSockets",
+            "SQLite",
+            "Bootstrap",
+            "jQuery",
+            "Daphne"
+        ],
+
+        challenges:
+            "Implementing real-time communication using Django Channels and WebSockets while managing chat rooms, message delivery and user presence.",
+
+        learning:
+            "Learned how WebSockets work with Django ASGI, Django Channels consumers, routing, real-time events and asynchronous communication.",
+
+        github:
+            "https://github.com/Sudeepssj/Nexuschat",
+
+        liveDemo:
+            "https://nexuschat-pb04.onrender.com"
+
+    }
+
+};
+
+
+// =====================================================
+// OPEN PROJECT MODAL
+// =====================================================
+
+const projectDetailsButtons =
+    document.querySelectorAll(".project-details-btn");
+
+
+projectDetailsButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const projectId =
+            button.dataset.project;
+
+        const project =
+            projectData[projectId];
+
+        if(!project){
+            console.log("Project data not found:", projectId);
+            return;
+        }
+
+
+        // IMAGE
+
+        modalProjectImage.src =
+            project.image;
+
+        modalProjectImage.alt =
+            project.title + " Screenshot";
+
+
+        // BASIC INFO
+
+        modalProjectTitle.textContent =
+            project.title;
+
+        modalProjectOverview.textContent =
+            project.overview;
+
+
+        // FEATURES
+
+        modalProjectFeatures.innerHTML = "";
+
+        project.features.forEach(feature => {
+
+            const li =
+                document.createElement("li");
+
+            li.textContent =
+                feature;
+
+            modalProjectFeatures.appendChild(li);
+
+        });
+
+
+        // TECH STACK
+
+        modalProjectTech.innerHTML = "";
+
+        project.tech.forEach(technology => {
+
+            const span =
+                document.createElement("span");
+
+            span.textContent =
+                technology;
+
+            modalProjectTech.appendChild(span);
+
+        });
+
+
+        // CHALLENGES
+
+        modalProjectChallenges.textContent =
+            project.challenges;
+
+
+        // LEARNING
+
+        modalProjectLearning.textContent =
+            project.learning;
+
+
+        // GITHUB
+
+        if(project.github){
+
+            modalGithub.href =
+                project.github;
+
+            modalGithub.style.display =
+                "flex";
+
+        }
+
+        else{
+
+            modalGithub.style.display =
+                "none";
+
+        }
+
+
+        // LIVE DEMO
+
+        if(project.liveDemo){
+
+            modalLiveDemo.href =
+                project.liveDemo;
+
+            modalLiveDemo.style.display =
+                "flex";
+
+            modalDeployment.style.display =
+                "none";
+
+        }
+
+        else{
+
+            modalLiveDemo.style.display =
+                "none";
+
+            modalDeployment.style.display =
+                "flex";
+
+        }
+
+
+        // OPEN
+
+        projectModal.classList.add("active");
+
+        document.body.style.overflow =
+            "hidden";
+
+    });
+
+});
+
+
+// =====================================================
+// CLOSE PROJECT MODAL
+// =====================================================
+
+function closeProjectModal(){
+
+    projectModal.classList.remove("active");
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+// CLOSE BUTTON
+
+projectModalClose.addEventListener(
+    "click",
+    closeProjectModal
+);
+
+
+// OVERLAY
+
+projectModalOverlay.addEventListener(
+    "click",
+    closeProjectModal
+);
+
+
+// ESC KEY
+
+document.addEventListener("keydown", (e) => {
+
+    if(e.key === "Escape"){
+
+        closeProjectModal();
+
+    }
+
+});

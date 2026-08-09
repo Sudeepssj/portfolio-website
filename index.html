@@ -724,9 +724,9 @@
                         <a href="https://github.com/Sudeepssj/smart-tourism-system" class="secondary-btn">
                             GitHub
                         </a>
-                        <a class="primary-btn project-details-btn" data-project="smart-tourism">
-                            View Details    
-                        </a>    
+                        <button class="primary-btn project-details-btn" data-project="smart-tourism">
+                            View Details
+                        </button>    
 
                     </div>
 
@@ -789,9 +789,9 @@
                         <div class="project-actions">
 
                             <a href="https://github.com/Sudeepssj/Pet-adoption-management-system">GitHub</a>
-                            <a class="primary-btn project-details-btn" data-project="pet-adoption">
+                            <button class="primary-btn project-details-btn" data-project="pet-adoption">
                                 View Details
-                            </a>
+                            </button>
 
                         </div>
 
@@ -824,9 +824,9 @@
                         <div class="project-actions">
 
                             <a href="https://github.com/Sudeepssj/Expense-tracker-web-app">GitHub</a>
-                            <a class="primary-btn project-details-btn" data-project="expense-tracker">
+                            <button class="project-details-btn" data-project="expense-tracker">
                                 View Details
-                                </a>
+                            </button>
 
                         </div>
 
@@ -859,7 +859,9 @@
                         <div class="project-actions">
 
                             <a href="https://github.com/Sudeepssj/Digital-smart-card-system">GitHub</a>
-                            <a href="#">View Details</a>
+                            <button class="primary-btn project-details-btn" data-project="smart-card">
+                                View Details
+                            </button>
 
                         </div>
 
@@ -895,9 +897,9 @@
                                 GitHub
                             </a>
 
-                            <a href="#">
+                            <button class="project-details-btn" data-project="edulearn">
                                 View Details
-                            </a>
+                            </button>
 
                         </div>
 
@@ -933,9 +935,9 @@
                                 GitHub
                             </a>
 
-                            <a href="#">
+                            <button class="project-details-btn" data-project="nexuschat">
                                 View Details
-                            </a>
+                            </button>
 
                         </div>
 
@@ -971,7 +973,135 @@
         </div>
 
     </section>
+    <!-- ================= PROJECT DETAILS MODAL ================= -->
 
+    <div class="project-modal" id="projectModal">
+
+        <div class="project-modal-overlay" id="projectModalOverlay"></div>
+
+        <div class="project-modal-box">
+
+            <!-- CLOSE BUTTON -->
+            <button class="project-modal-close" id="projectModalClose">
+                <i class="ri-close-line"></i>
+            </button>
+
+            <!-- PROJECT IMAGE -->
+            <div class="project-modal-image">
+                <img id="modalProjectImage"
+                    src=""
+                    alt="Project Screenshot">
+            </div>
+
+            <!-- PROJECT CONTENT -->
+            <div class="project-modal-content">
+
+                <span class="project-modal-label">
+                    PROJECT DETAILS
+                </span>
+
+                <h2 id="modalProjectTitle">
+                    Project Title
+                </h2>
+
+                <p id="modalProjectOverview"
+                class="project-modal-overview">
+                </p>
+
+
+                <!-- FEATURES -->
+
+                <div class="modal-section">
+
+                    <h3>
+                        <i class="ri-sparkling-line"></i>
+                        Key Features
+                    </h3>
+
+                    <ul id="modalProjectFeatures">
+                    </ul>
+
+                </div>
+
+
+                <!-- TECH STACK -->
+
+                <div class="modal-section">
+
+                    <h3>
+                        <i class="ri-code-s-slash-line"></i>
+                        Tech Stack
+                    </h3>
+
+                    <div id="modalProjectTech"
+                        class="modal-tech">
+                    </div>
+
+                </div>
+
+
+                <!-- CHALLENGES -->
+
+                <div class="modal-section">
+
+                    <h3>
+                        <i class="ri-lightbulb-line"></i>
+                        Challenges
+                    </h3>
+
+                    <p id="modalProjectChallenges">
+                    </p>
+
+                </div>
+
+
+                <!-- LEARNING -->
+
+                <div class="modal-section">
+
+                    <h3>
+                        <i class="ri-graduation-cap-line"></i>
+                        What I Learned
+                    </h3>
+
+                    <p id="modalProjectLearning">
+                    </p>
+
+                </div>
+
+
+                <!-- BUTTONS -->
+
+                <div class="modal-project-actions">
+
+                    <a id="modalGithub"
+                    href="#"
+                    target="_blank"
+                    class="secondary-btn">
+                        <i class="ri-github-fill"></i>
+                        GitHub
+                    </a>
+
+                    <a id="modalLiveDemo"
+                    href="#"
+                    target="_blank"
+                    class="primary-btn">
+                        <i class="ri-external-link-line"></i>
+                        Live Demo
+                    </a>
+
+                    <span id="modalDeployment"
+                        class="deployment-status">
+                        Deployment In Progress
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
     <!-- ================= CONTACT ================= -->
 
     <section class="contact section" id="contact">
