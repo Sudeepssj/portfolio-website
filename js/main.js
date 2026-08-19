@@ -882,7 +882,7 @@ const floatingContactBtn =
     document.getElementById("floatingContactBtn");
 
 const portfolioURL =
-    "https://sudeep-developer-portfolio.netlify.app/";
+    "https://sudeep-developer-portfolio.netlify.app/?v=2ho";
 
 
 // =========================================================
