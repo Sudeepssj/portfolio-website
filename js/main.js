@@ -860,3 +860,196 @@ document.addEventListener("keydown", (e) => {
     }
 
 });
+
+
+// =========================================================
+// FLOATING QUICK ACTIONS
+// =========================================================
+
+const floatingActions =
+    document.getElementById("floatingActions");
+
+const floatingShareBtn =
+    document.getElementById("floatingShareBtn");
+
+const sharePortfolioBtn =
+    document.getElementById("sharePortfolioBtn");
+
+const copyPortfolioBtn =
+    document.getElementById("copyPortfolioBtn");
+
+const floatingContactBtn =
+    document.getElementById("floatingContactBtn");
+
+const portfolioURL =
+    "https://sudeep-developer-portfolio.netlify.app/";
+
+
+// =========================================================
+// OPEN / CLOSE QUICK ACTIONS
+// =========================================================
+
+floatingShareBtn.addEventListener("click", () => {
+
+    const isActive =
+        floatingActions.classList.toggle("active");
+
+    floatingShareBtn.setAttribute(
+        "aria-expanded",
+        isActive
+    );
+
+});
+
+
+// =========================================================
+// SHARE PORTFOLIO
+// =========================================================
+
+sharePortfolioBtn.addEventListener("click", async () => {
+
+    const shareData = {
+        title: "Sudeep Singh Jadoun | Software Developer Portfolio",
+        text: "Check out Sudeep Singh Jadoun's Software Developer Portfolio.",
+        url: portfolioURL
+    };
+
+
+    // ============================================
+    // PHONE / SECURE WEBSITE
+    // ============================================
+
+    if (
+        navigator.share &&
+        window.isSecureContext
+    ) {
+
+        try {
+
+            await navigator.share(shareData);
+
+            return;
+
+        } catch (error) {
+
+            // User cancelled sharing
+            if (error.name === "AbortError") {
+                return;
+            }
+
+            console.log("Native share failed:", error);
+        }
+    }
+
+
+    // ============================================
+    // DESKTOP / LIVE SERVER FALLBACK
+    // ============================================
+
+    copyPortfolioLink();
+
+});
+
+
+// =========================================================
+// COPY PORTFOLIO LINK
+// =========================================================
+
+function copyPortfolioLink() {
+
+    const textArea =
+        document.createElement("textarea");
+
+    textArea.value =
+        portfolioURL;
+
+    textArea.style.position =
+        "fixed";
+
+    textArea.style.left =
+        "-9999px";
+
+    textArea.style.top =
+        "0";
+
+    textArea.style.opacity =
+        "0";
+
+    document.body.appendChild(
+        textArea
+    );
+
+    textArea.focus();
+
+    textArea.select();
+
+    textArea.setSelectionRange(
+        0,
+        textArea.value.length
+    );
+
+
+    let copied = false;
+
+    try {
+
+        copied =
+            document.execCommand("copy");
+
+    } catch (error) {
+
+        console.log(
+            "Copy error:",
+            error
+        );
+
+    }
+
+
+    document.body.removeChild(
+        textArea
+    );
+
+
+    if (copied) {
+
+        showToast(
+            "✓ Portfolio link copied!"
+        );
+
+    } else {
+
+        showToast(
+            "Please copy the portfolio URL manually."
+        );
+
+    }
+
+}
+
+
+// =========================================================
+// COPY BUTTON
+// =========================================================
+
+copyPortfolioBtn.addEventListener(
+    "click",
+    copyPortfolioLink
+);
+
+// =========================================================
+// CONTACT ME
+// =========================================================
+
+floatingContactBtn.addEventListener("click", () => {
+
+    contactModal.classList.add("active");
+
+    floatingActions.classList.remove("active");
+
+    floatingShareBtn.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+});
