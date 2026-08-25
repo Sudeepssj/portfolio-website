@@ -666,7 +666,7 @@ const projectData = {
             "https://github.com/Sudeepssj/Nexuschat",
 
         liveDemo:
-            "https://nexuschat-pb04.onrender.com"
+            ""
 
     }
 
