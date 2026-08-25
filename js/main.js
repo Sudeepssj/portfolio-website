@@ -414,7 +414,7 @@ const projectData = {
 
         title: "Pet Adoption Platform",
 
-        image: "./assets/images/pet-adoption.jpg",
+        image: "./assets/images/pet-adoption.png",
 
         overview:
             "A web platform designed to manage pet listings, adoption requests and interactions between users and available pets.",
